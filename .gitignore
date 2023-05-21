@@ -1,7 +1,9 @@
-.aux
-.fdb_latexmk
-.fls
-.log
-.out
-.pre
-.synctex.gz
+*.aux
+*.log
+*.synctex.gz
+*.out
+*.fls
+*.fdb_latexmk
+*.pre
+*.autosave.xopp
+*.xopp~
