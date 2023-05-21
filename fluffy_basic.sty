@@ -8,7 +8,7 @@
 \ProvidesPackage{fluffy}
 
 % Packages:
-\usepackage[top=0.75in]{geometry}
+% \usepackage[top=0.75in]{geometry}
 \usepackage{enumitem}
 \usepackage{parskip}
 \usepackage{amsmath}
@@ -58,24 +58,29 @@
 \newcommand{\Q}{\mathbb{Q}}
 \newcommand{\Z}{\mathbb{Z}}
 \newcommand{\C}{\mathbb{C}}
+\newcommand{\D}{\mathbb{D}}
+\newcommand{\CC}{\mathcal{C}}
 \newcommand{\F}{\mathbb{F}}
-\newcommand{\T}{\mathcal{T}}
+\newcommand{\TT}{\mathcal{T}}
 
-\newcommand{\eps}{\varepsilon}
-\newcommand{\dg}{^\circ}
+% \newcommand{\eps}{\varepsilon}
+% \newcommand{\dg}{^\circ}
 
-\newcommand{\floor}[1]{\left\lfloor #1 \right\rfloor}
+% \newcommand{\floor}[1]{\left\lfloor #1 \right\rfloor}
 \newcommand{\ceil}[1]{\left\lceil #1 \right\rceil}
-\newcommand{\abs}[1]{\left\lvert #1 \right\rvert}
-\newcommand{\norm}[1]{\left\lVert #1 \right\rVert}
+% \newcommand{\abs}[1]{\left\lvert #1 \right\rvert}
+% \newcommand{\norm}[1]{\left\lVert #1 \right\rVert}
 
-\DeclareMathOperator{\cis}{cis}
-\DeclareMathOperator*{\lcm}{lcm}
-\DeclareMathOperator{\diam}{diam}
-\DeclareMathOperator{\rank}{rank}
+% \DeclareMathOperator{\cis}{cis}
+% \DeclareMathOperator*{\lcm}{lcm}
+% \DeclareMathOperator{\diam}{diam}
+% \DeclareMathOperator{\rank}{rank}
 \DeclareMathOperator{\rk}{rk}
-\DeclareMathOperator{\re}{Re}
-\DeclareMathOperator{\im}{Im}
+\let\Re\relax
+\let\Im\relax
+\DeclareMathOperator{\Re}{Re}
+\DeclareMathOperator{\Im}{Im}
 
 % Integrals: dx
 \renewcommand{\d}[1]{\mathop{\mathrm{d}{#1}}}
+\newcommand{\dd}[1]{\mathop{\partial{#1}}}

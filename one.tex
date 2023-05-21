@@ -6,11 +6,214 @@ following relations:
 \begin{enumerate}[label=(\alph*)]
     \item $|z - z_1| = |z - z_2|$ where $z_1$, $z_2 \in \C$.
     \item $1/z = \overline{z}$.
-    \item $\re(z) = 3$.
-    \item $\re(z) > c$, (resp., $\geq c$) where $c \in \R$.
-    \item $\re(az + b) > 0$ where $a$, $b \in \C$.
-    \item $|z| = \re(z) + 1$.
-    \item $\im(z) = c$ with $c \in \R$.
+    \item $\Re(z) = 3$.
+    \item $\Re(z) > c$, (resp., $\geq c$) where $c \in \R$.
+    \item $\Re(az + b) > 0$ where $a$, $b \in \C$.
+    \item $|z| = \Re(z) + 1$.
+    \item $\Im(z) = c$ with $c \in \R$.
 \end{enumerate}
 
+\end{exercise}
+
+
+\begin{exercise}
+Let $\langle \cdot, \cdot\rangle$ denote the usual inner product in $\R^2$. In other words, if $Z = (x_1, y_1)$ and $W = (x2, y2)$, then $$\langle Z,W\rangle = x_1x_2 + y_1y_2.$$
+
+Similarly, we may define a Hermitian inner product $(\cdot, \cdot)$ in $\C$ by
+$$(z, w) = z\overline{w}$$.
+
+The term Hermitian is used to describe the fact that $(\cdot, \cdot)$ is not symmetric, but rather satisfies the relation
+$$(z, w) = (w, z) \quad \text{for all } z, w \in C.$$
+Show that $$\langle z, w\rangle = \frac{1}{2}[(z,w)+(w,z)]=\Re(z,w),$$ where we use the usual identification $z = x + iy \in \C$ with $(x, y) \in \R^2$.
+\end{exercise}
+
+\begin{exercise}
+With $\omega = se^{i\varphi}$, where $s\geq0$ and $\varphi\in\R$, solve the equation $zn = \omega$ in $\C$ where $n$ is a natural number. How many solutions are there?
+\end{exercise}
+
+\begin{exercise}
+Show that it is impossible to define a total ordering on $\C$. In other words, one cannot find a relation $\succ$ between complex numbers so that:
+\begin{enumerate}[label=(\roman*)]
+\item For any two complex numbers $z$, $w$, one and only one of the following is true: $z \succ w,$ $w \succ z,$ or $z = w$.
+\item For all $z_1, z_2, z_3 \in \C$ the relation $z_1 \succ z_2$ implies $z_1 + z_3 \succ z_2 + z_3.$
+\item Moreover, for all $z_1, z_2, z_3 \in \C$ with $z_3 \succ 0$, then $z_1 \succ z_2$ implies $z_1z_3 \succ z_2z_3$.
+\end{enumerate}
+[Hint: First check if $i \succ 0$ is possible.]
+\end{exercise}
+
+\begin{exercise}
+A set $\Omega$ is said to be \textbf{pathwise connected} if any two points in $\Omega$ can be joined by a (piecewise-smooth) curve entirely contained in $\Omega$. The purpose of this exercise is to prove that an \textit{open} set $\Omega$ is pathwise connected if and only if $\Omega$ is connected.
+
+\begin{enumerate}[label=(\alph*)]
+\item Suppose first that $\Omega$ is open and pathwise connected, and that it can be written as $\Omega = \Omega_1 \cup \Omega_2$ where $\Omega_1$ and $\Omega_2$ are disjoint non-empty open sets. Choose two points $w_1 \in \Omega_1$ and $w_2 \in \Omega_2$ and let $\gamma$ denote a curve in $\Omega$ joining $w_1$ to $w_2$. Consider a parametrization $z: [0, 1] \to \Omega$ of this curve with $z(0) = w_1$ and $z(1) = w_2$, and let
+$$t^* = \sup_{0\leq t\leq1} \{t : z(s) \in \Omega_1 \quad \text{for all } 0 \leq s<t\}.$$
+Arrive at a contradiction by considering the point $z(t^*)$.
+\item Conversely, suppose that $\Omega$ is open and connected. Fix a point $w \in \Omega$ and let $\Omega_1 \subset \Omega$ denote the set of all points that can be joined to w by a curve contained in $\Omega$. Also, let $\Omega_2 \subset \Omega$ denote the set of all points that cannot be joined to $w$ by a curve in $\Omega$. Prove that both $\Omega_1$ and $\Omega_2$ are open, disjoint and their union is $\Omega$. Finally, since $\Omega_1$ is non-empty (why?) conclude that $\Omega=\Omega_1$ as desired.
+\end{enumerate}
+The proof actually shows that the regularity and type of curves we used to define pathwise connectedness can be relaxed without changing the equivalence between the two definitions when $\Omega$ is open. For instance, we may take all curves to be continuous, or simply polygonal lines.\footnote{A polygonal line is a piecewise-smooth curve which consists of finitely many straight line segments.
+}
+\end{exercise}
+
+\begin{exercise}
+Let $\Omega$ be an open set in $\C$ and $z \in \Omega$. The \textbf{connected component} (or simply the \textbf{component}) of $\Omega$ containing $z$ is the set $\CC_z$ of all points $w$ in $\Omega$ that can be joined to $z$ by a curve entirely contained in $\Omega$.
+\begin{enumerate}
+\item Check first that $\CC_z$ is open and connected. Then, show that $w \in \CC_z$ defines an equivalence relation, that is: (i) $z \in \CC_z$, (ii) $w \in \CC_z$ implies $z \in \CC_w$, and (iii) if $w \in \CC_z$ and $z \in \CC_\zeta$, then $w \in \CC_\zeta$.
+
+Thus $\Omega$ is the union of all its connected components, and two components are either disjoint or coincide.
+\item Show that $\Omega$ can have only countably many distinct connected components.
+\item Prove that if $\Omega$ is the complement of a compact set, then $\Omega$ has only one unbounded component.
+\end{enumerate}
+[Hint: For (b), one would otherwise obtain an uncountable number of disjoint open
+balls. Now, each ball contains a point with rational coordinates. For (c), note that
+the complement of a large disc containing the compact set is connected.]
+\end{exercise}
+
+\begin{exercise}
+The family of mappings introduced here plays an important role in complex analysis. These mappings, sometimes called \textbf{Blaschke factors}, will reappear in various applications in later chapters.
+
+\begin{enumerate}[label=(\alph*)]
+\item Let $z$, $w$ be two complex numbers such that $\overline{z}w 
+\neq 1$. Prove that $$\abs{\frac{w-z}{1-\overline{w}z}}<1 \quad \text{if } \abs{z} < 1 \text{ and } \abs{w} < 1,$$ and also that $$\abs{\frac{w-z}{1-\overline{w}z}} = 1 \quad \text{if } \abs{z}=1 \text{ or } \abs{w}=1.$$
+
+[Hint: Why can one assume that z is real? It then suffices to prove that $$(r - w)(r - \overline{w}) \leq (1 - rw)(1 - r\overline{w})$$
+with equality for appropriate $r$ and $|w|$.]
+\item Prove that for a fixed $w$ in the unit disc $\D$, the mapping $$F: z\mapsto \frac{w-z}{1-\overline{w}z}$$ satisfies the following conditions:
+\begin{enumerate}[label=(\roman*)]
+\item $F$ maps the unit disc to itself (that is, $F: \D \to \D$), and is holomorphic.
+\item $F$ interchanges $0$ and $w$, namely $F(0) = w$ and $F(w) = 0$.
+\item $|F(z)| = 1$ if $|z| = 1$.
+\item $F: \D \to \D$ is bijective. [Hint: Calculate $F \circ F$.]
+\end{enumerate}
+\end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+Suppose $U$ and $V$ are open sets in the complex plane. Prove that if $f : U \to V$ and $g : V \to C$ are two functions that are differentiable (in the real sense, that is, as functions of the two real variables $x$ and $y$), and $h = g \circ f$, then 
+$$\frac{\dd{h}}{\dd{z}} = \frac{\dd{g}}{\dd{z}}\frac{\dd{f}}{\dd{z}}+\frac{\dd{g}}{\dd{\overline{z}}}\frac{\dd{\overline{f}}}{\dd{z}}$$ and $$\frac{\dd{h}}{\dd{\overline{z}}} = \frac{\dd{g}}{\dd{z}}\frac{\dd{f}}{\dd{\overline{z}}}+\frac{\dd{g}}{\dd{\overline{z}}}\frac{\dd{\overline{f}}}{\dd{\overline{z}}}.$$ 
+
+This is the complex version of the chain rule.
+\end{exercise}
+
+\begin{exercise}
+Show that in polar coordinates, the Cauchy-Riemann equations take the form $$\frac{\dd{u}}{\dd{r}}=\frac{1}{r}\frac{\dd{v}}{\dd{\theta}} \quad \text{and} \quad \frac{1}{r}\frac{\dd{u}}{\dd{\theta}} = -\frac{\dd{v}}{\dd{r}}.$$
+Use these equations to show that the logarithm function defined by
+$$\log z = \log r + i\theta \quad \text{where } z = re^{i\theta} \text{ with } -\pi < \theta < \pi$$ is holomorphic in the region $r > 0$ and $-\pi<\theta<\pi$.
+\end{exercise}
+
+\begin{exercise}
+Show that $$4\frac{\dd{}}{\dd{z}}\frac{\dd{}}{\dd{\overline{z}}}=4\frac{\dd{}}{\dd{\overline{z}}}\frac{\dd{}}{\dd{z}}=\triangle,$$
+where $\triangle$ is the \textbf{Laplacian} $$\triangle = \frac{\dd{}^2}{\dd{x^2}}+\frac{\dd{}^2}{\dd{y^2}}$$
+\end{exercise}
+
+\begin{exercise}
+Use Exercise 10 to prove that if $f$ is holomorphic in the open set $\Omega$, then the real and imaginary parts of $f$ are \textbf{harmonic}; that is, their Laplacian is zero.
+\end{exercise}
+
+\begin{exercise}
+Consider the function defined by $$f(x + iy) = \sqrt{|x||y|}, \quad \text{ whenever } x, y \in \R.$$ Show that $f$ satisfies the Cauchy-Riemann equations at the origin, yet $f$ is not
+holomorphic at 0.
+\end{exercise}
+
+\begin{exercise}
+Suppose that $f$ is holomorphic in an open set $\Omega$. Prove that in any one of the following cases:
+\begin{enumerate}[label=(\alph*)]
+\item $\Re(f)$ is constant;
+\item $\Im(f)$ is constant;
+\item $|f|$ is constant;
+\end{enumerate}
+one can conclude that $f$ is constant.
+\end{exercise}
+
+\begin{exercise}
+Suppose $\{a_n\}^N_{n=1}$ and $\{b_n\}^N_{n=1}$ are two finite sequences of complex numbers. Let $B_k = \sum^k_{n=1}b_n$ denote the partial sums of the series $\sum b_n$ with the convention $B_0=0$. Prove the \textbf{summation by parts} formula $$\sum_{n=M}^N a_nb_n = a_NB_N - a_MB_{M-1} - \sum_{n=M}^{N-1}(a_{n+1}-a_n)B_n.$$
+\end{exercise}
+
+\begin{exercise}
+\textbf{Abel’s theorem.} 
+Suppose $\sum_{n=1}^\infty a_n$ converges. Prove that $$\lim_{r\to1, r<1} \sum_{n=1}^\infty r^na_n = \sum_{n=1}^\infty a_n.$$
+
+[Hint: Sum by parts.] In other words, if a series converges, then it is Abel summable with the same limit. For the precise definition of these terms, and more information on summability methods, we refer the reader to Book I, Chapter 2.
+\end{exercise}
+
+\begin{exercise}
+Determine the radius of convergence of the series $\sum_{n=1}^\infty a_nz^n$ when:
+
+\begin{enumerate}[label=(\alph*)]
+\item $a_n = (\log n)^2$
+\item $a_n = n!$
+\item $a_n = n^2/(4n+3n)$
+\item $a_n = (n!)^3/(3n)!$ [Hint: Use Stirling’s formula, which says that $n! \sim cn^{n+1/2}e^{-n}$ for some $c > 0$..]
+\item Find the radius of convergence of the \textbf{hypergeometric series} $$F(\alpha, \beta, \gamma; z)=1+\sum_{n=1}^\infty \frac{\alpha(\alpha+1)\cdots(\alpha+n-1)\beta(\beta+1)\cdots(\beta+n-1)}{n!\gamma(\gamma+1)\cdots(\gamma+n-1)}z^n$$
+Here $\alpha, \beta \in \C$ and $\gamma = 0, -1, -2, \cdots$.
+\item Find the radius of convergence of the Bessel function of order r: $$J_r(z) = \left(\frac{z}{2}\right)^r \sum_{n=0}^\infty \frac{(-1)^n}{n!(n+r)!} \left(\frac{z}{2}\right)^{2n},$$
+where $r$ is a positive integer.
+\end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+Show that if $\{a_n\}_{n=0}^\infty$ is a sequence of non-zero complex numbers such that $$\lim_{n\to\infty} \frac{\abs{a_{n+1}}}{\abs{a_n}} = L,$$ then $$\lim_{n\to\infty} \abs{a_n}^{1/n} = L.$$
+
+In particular, this exercise shows that when applicable, the ratio test can be used to calculate the radius of convergence of a power series.
+\end{exercise}
+
+\begin{exercise}
+Let $f$ be a power series centered at the origin. Prove that $f$ has a power series expansion around any point in its disc of convergence.
+
+[Hint: Write $z = z_0 + (z - z_0)$ and use the binomial expansion for $z_n$.]
+\end{exercise}
+
+\begin{exercise}
+Prove the following:
+\begin{enumerate}[label=(\alph*)]
+\item The power series $\sum nz^n$ does not converge on any point of the unit circle.
+\item The power series $\sum z^n/n^2$ converges at every point of the unit circle.
+\item The power series $z^n/n$ converges at every point of the unit circle except $z = 1$. [Hint: Sum by parts.]
+\end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+Expand $(1 - z)^{-m}$ in powers of $z$. Here m is a fixed positive integer. Also, show that if $$(1-z)^{-m} = \sum_{n=0}^\infty a_nz^n,$$ then one obtains the following asymptotic relation for the coefficients: $$a_n\sim \frac{1}{(m-1)!}n^{m-1} \quad \text{as } n\to\infty$$
+\end{exercise}
+
+\begin{exercise}
+Show that for $|z| < 1$, one has $$\frac{z}{1-z^2} + \frac{z^2}{1-z^4} + \cdots + \frac{z^{2^n}}{1-z^{2^{n+1}}} + \cdots = \frac{z}{1-z},$$ and $$\frac{z}{1+z} + \frac{2z^2}{1+z^2} + \cdots + \frac{2^kz^{2^k}}{1+z^{2^k}} + \cdots = \frac{z}{1-z}.$$
+
+Justify any change in the order of summation.
+
+[Hint: Use the dyadic expansion of an integer and the fact that $2^{k+1} - 1=1+2+2^2 + \cdots + 2^k$.]
+\end{exercise}
+
+\begin{exercise}
+Let $\N = \{1, 2, 3, \ldots\}$ denote the set of positive integers. A subset $S \subset \N$ is said to be in arithmetic progression if $$S = {a, a + d, a + 2d, a + 3d, \ldots}$$ where $a, d \in \N$. Here $d$ is called the step of $S$.
+
+Show that $\N$ cannot be partitioned into a finite number of subsets that are in arithmetic progression with distinct steps (except for the trivial case $a = d = 1$).
+
+[Hint: Write $\sum_{n\in\N} z^n$ as a sum of terms of the type $\frac{z^a}{1-z^d}$.]
+\end{exercise}
+
+\begin{exercise}
+Consider the function $f$ defined on $\R$ by $$f(x)=\begin{cases} 0 & \text{if } x\leq 0, \\ e^{-1/x^2} & \text{if } x > 0. \end{cases}$$
+
+Prove that $f$ is indefinitely differentiable on $\R$, and that $f^{(n)}
+(0) = 0$ for all $n\geq 1$.
+Conclude that $f$ does not have a converging power series expansion $\sum_{n=0}^\infty a_nx^n$ for $x$ near the origin.
+\end{exercise}
+
+\begin{exercise}
+
+24. Let $\gamma$ be a smooth curve in $\C$ parametrized by $z(t):[a, b] \to C$. Let $\gamma^-$ denote the curve with the same image as $\gamma$ but with the reverse orientation. Prove that for any continuous function $f$ on $\gamma$ $$\int_\gamma f(x)\d{z} = -\int_{\gamma^-} f(X)\d{z}.$$
+\end{exercise}
+
+\begin{exercise}
+The next three calculations provide some insight into Cauchy’s theorem, which we treat in the next chapter.
+
+\begin{enumerate}[label=(\alph*)]
+\item Evaluate the integrals $$\int_\gamma z^n\d{z}$$ for all integers $n$. Here $\gamma$ is any circle centered at the origin with the positive (counterclockwise) orientation.
+\item Same question as before, but with $\gamma$ any circle not containing the origin.
+\item Show that if $|a|<r<|b|$, then $$\int_\gamma \frac{1}{(z-a)(z-b)}\d{z} = \frac{2\pi i}{a-b},$$ where $\gamma$ denotes the circle centered at the origin, of radius $r$, with the positive orientation.
+\end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+Suppose $f$ is continuous in a region $\Omega$. Prove that any two primitives of $f$ (if they exist) differ by a constant.
 \end{exercise}
