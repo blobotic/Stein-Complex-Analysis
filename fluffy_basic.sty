@@ -1,0 +1,81 @@
+% fluffy.sty
+
+% References: 
+% https://www.dropbox.com/sh/poa3xrp198dn12v/AAB_7u22K5IT15K2G_Ie-qlea?dl=0&preview=MT.sty
+% https://github.com/Genius3435/LaTeX-Style/blob/main/ritwin.sty
+% https://github.com/unity858/sundry/blob/main/latex/second%20sty/seto.cls
+
+\ProvidesPackage{fluffy}
+
+% Packages:
+\usepackage[top=0.75in]{geometry}
+\usepackage{enumitem}
+\usepackage{parskip}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{graphicx}
+\usepackage{tikz-cd}
+\usepackage{adjustbox}
+\usepackage[framemethod=TikZ]{mdframed}
+\usepackage{thmtools}
+\usepackage{hyperref}
+\usepackage{color}
+\usepackage{tcolorbox}
+\tcbuselibrary{skins,breakable}
+\tcbset{skin=enhanced}
+\usepackage{ifthen}
+\usepackage{etoolbox}
+\graphicspath{ {./img/} }
+% who the heck made quotes weird in latex
+\usepackage [autostyle, english = american]{csquotes}
+\MakeOuterQuote{"}
+
+% for bold + smallcapps font...?
+\usepackage{fix-cm}
+\usepackage[T1]{fontenc} % To switch to the T1 encoding
+\usepackage{lmodern} % To switch to Latin Modern
+\rmfamily % To load Latin Modern Roman and enable the following NFSS declarations.
+% Declare that Latin Modern Roman (lmr) should take
+% its bold (b) and bold extended (bx) weight, and small capital (sc) shape, 
+% from the corresponding Computer Modern Roman (cmr) font, for the T1 font encoding.
+\DeclareFontShape{T1}{lmr}{b}{sc}{<->ssub*cmr/bx/sc}{}
+\DeclareFontShape{T1}{lmr}{bx}{sc}{<->ssub*cmr/bx/sc}{}
+
+% Formatting:
+\newcommand{\fhead}[1]{\begin{center}\course \\\prof \\\room \\#1\end{center}\vspace{2mm}}
+
+\newcommand{\ahead}{\centering
+\ifdef{\atitle}{{\Large\textsc{\textbf{\atitle \vspace{0.1cm}}}} \\}{} 
+\ifdef{\acourse}{\textsc{\acourse} \\}{}
+\ifdef{\aprof}{\textsc{\aprof} \\}{}
+\ifdef{\aauthor}{\textsc{\aauthor} \\}{}
+\ifdef{\adate}{\textsc{\adate}}{}}
+
+% Math
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\F}{\mathbb{F}}
+\newcommand{\T}{\mathcal{T}}
+
+\newcommand{\eps}{\varepsilon}
+\newcommand{\dg}{^\circ}
+
+\newcommand{\floor}[1]{\left\lfloor #1 \right\rfloor}
+\newcommand{\ceil}[1]{\left\lceil #1 \right\rceil}
+\newcommand{\abs}[1]{\left\lvert #1 \right\rvert}
+\newcommand{\norm}[1]{\left\lVert #1 \right\rVert}
+
+\DeclareMathOperator{\cis}{cis}
+\DeclareMathOperator*{\lcm}{lcm}
+\DeclareMathOperator{\diam}{diam}
+\DeclareMathOperator{\rank}{rank}
+\DeclareMathOperator{\rk}{rk}
+\DeclareMathOperator{\re}{Re}
+\DeclareMathOperator{\im}{Im}
+
+% Integrals: dx
+\renewcommand{\d}[1]{\mathop{\mathrm{d}{#1}}}
