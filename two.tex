@@ -1,0 +1,161 @@
+\section{Cauchy's Theorem and Its Applications}
+
+\begin{exercise}
+Prove that $$\int_0^\infty \sin(x^2)\d{x} = \int_0^\infty \cos(x^2) \d{x} = \frac{\sqrt{2\pi}}{4}.$$
+
+These are the \textbf{Fresnel integrals}. Here, $\int_0^\infty$ is interpreted as $\lim_{R\to\infty}\int_0^R$.
+
+[Hint: Integrate the function $e-z^2$ over the path in Figure 14. Recall that $\int_{-\infty}^\infty e^{-x^2}\d{x}=\sqrt{\pi}$.]
+\end{exercise}
+
+% insert graph here
+
+\begin{exercise}
+Show that $\int_0^\infty\frac{\sin{x}}{x}\d{x} = \frac{\pi}{2}.$
+
+[Hint: The integral equals $\frac{1}{2i}\int_{-\infty}^\infty \frac{e^{ix}-1}{x}\d{x}$. Use the indented semicricle.]
+\end{exercise}
+
+\begin{exercise}
+Evaluate the integrals $$\int_0^\infty e^{-ax}\cos{bx}\d{x} \quad \text{and} \quad \int_0^\infty e^{-ax}\sin{bx}\d{x}, \quad a>0$$ by integrating $e^{-Ax}$, $A = \sqrt{a^2+b^2}$, over an appropriate sector with angle $\omega$, with $\cos{\omega}=a/A$.
+\end{exercise}
+
+\begin{exercise}
+Prove that for all $\xi\in\C$ we have $e^{-\pi\xi^2}=\int_{-\infty}^\infty e^{-\pi x^2}e^{2\pi ix\xi}\d{x}$.
+\end{exercise}
+
+\begin{exercise}
+Suppose $f$ is continuously \textit{complex} differentiable on $\Omega$, and $T\subset\Omega$ is a triangle whose interior is also contained in $\Omega$. Apply Green's theorem to show that $$\int_T f(x)\d{z}=0.$$
+
+This provides a proof of Goursat's theorem under the additional assumption that $f'$ is continuous.
+
+[Hint: Green's theorem says that if $(F, G)$ is a continuously differentiable vector
+field, then $$\int_T F\d{x} + G\d{y} = \int_{\text{Interior of }T} \left(\frac{\dd{G}}{\dd{x}}-\frac{\dd{F}}{\dd{y}}\right)\d{x}\d{y}.$$
+
+For appropriate $F$ and $G$, one can then use the Cauchy-Riemann equations.]
+\end{exercise}
+
+\begin{exercise}
+Let $\Omega$ be an open subset of $\C$ and let $T\subset\Omega$ be a triangle whose interior is also contained in $\Omega$. Suppose that $f$ is a function holomorphic in $\Omega$ except possibly at a point $w$ inside $T$. Prove that if $f$ is bounded near $w$, then $$\int_T f(x)\d{z}=0.$$
+\end{exercise}
+
+\begin{exercise}
+Suppose $f:\D\to\C$ is holomorphic. Show that the diameter $d = \sup_{z,w\in\D} \abs{f(z)-f(w)}$ of the image of $f$ satisfies $$2\abs{f'(0)}\leq d.$$
+Moreover, it can be shown that equality holds precisely when $f$ is linear, $f(z) =
+a_0 + a_1z$.
+
+\textbf{Note.} In connection with this result, see the relationship between the diameter of a curve and Fourier series described in Problem 1, Chapter 4, Book I.
+
+[Hint: $2f'(0)=\frac{1}{2\pi i} \int_{\abs{\zeta}=r} \frac{f(\zeta)-f(-\zeta)}{\zeta^2}\d{\zeta}$ whenever $0<r<1$.]
+\end{exercise}
+
+\begin{exercise}
+If $f$ is a holomorphic function on the strip $-1 <y< 1$, $x\in\R$ with $$\abs{f(z)}\leq A(1+\abs{z})^\eta, \quad \eta \text{ a fixed real number}$$ for all $z$ in that strip, show that for each integer $n\geq 0$ there exists $A_n\geq 0$ so that $$\abs{f^{(n)}(x)}\leq A_n(1+\abs{x})^\eta, \quad \text{for all } x\in\R.$$
+
+[Hint: Use the Cauchy inequalities.]
+\end{exercise}
+
+\begin{exercise}
+Let $\Omega$ be a bounded open subset of $\C$, and $\varphi:\Omega\to\Omega$ a holomorphic function. Prove that if there exists a point $z_0\in\Omega$ such that
+$$\varphi(z_0) = z_0 \quad \text{and}\quad \varphi'(z_0)=1$$ then $\varphi$ is linear.
+
+[Hint: Why can one assume that $z_0 = 0$? Write $\varphi(z) = z + a_nz_n + O(z^{n+1})$ near $0$, and prove that if $\varphi_k = \varphi \cdot \ldots\cdot\varphi$ (where $\varphi$ appears $k$ times), then $\varphi_k(z) = z + ka_nz_n + O(z^{n+1})$. Apply the Cauchy inequalities and let $k\to\infty$ to conclude the proof. Here we use the standard $O$ notation, where $f(z) = O(g(z))$ as $z\to0$ means that $\abs{f(z)}\leq C\abs{g(z)}$ for some constant $C$ as $\abs{z} \to 0$.]
+\end{exercise}
+
+
+\begin{exercise}
+Weierstrass's theorem states that a continuous function on $[0, 1]$ can be uniformly approximated by polynomials. Can every continuous function on the closed
+unit disc be approximated uniformly by polynomials in the variable $z$?
+\end{exercise}
+
+\begin{exercise}
+Let $f$ be a holomorphic function on the disc $D_{R_0}$ centered at the origin and
+of radius $R_0$.
+
+\begin{enumerate}[label=(\alph*)]
+\item Prove that whenever $0<R<R_0$ and $\abs{z} < R$, then $$f(z)=\frac{1}{2\pi} \int_0^{2\pi} f(\Re^{i\varphi})\Re\left(\frac{Re^{i\varphi}+z}{Re^{i\varphi}-z}\right) \d{\varphi}.$$
+\item Show that $$\Re\left(\frac{Re^{i\gamma}+r}{Re^{i\gamma}-r}\right) = \frac{R^2-r^2}{R^2-2Rr\cos{\gamma}+r^2}.$$
+\end{enumerate}
+[Hint: For the first part, note that if $w = R^22/\overline{z}$, then the integral of $f(\zeta)/(\zeta - w)$ around the circle of radius $R$ centered at the origin is zero. Use this, together with
+the usual Cauchy integral formula, to deduce the desired identity.]
+\end{exercise}
+
+\begin{exercise}
+Let $u$ be a real-valued function defined on the unit disc $\D$. Suppose that $u$ is
+twice continuously differentiable and harmonic, that is, $$\triangle u(x,y)=0$$ for all $(x,y)\in\D$.
+\begin{enumerate}[label=(\alph*)]
+\item Prove that there exists a holomorphic function $f$ on the unit disc such that $$\Re(f)=u.$$
+
+Also show that the imaginary part of $f$ is uniquely defined up to an additive
+(real) constant. [Hint: From the previous chapter we would have $f'(z)=2\dd{u}/\dd{z}$. Therefore, let $g(z)=2\dd{u}/\dd{z}$ and prove that $g$ is holomorphic. Why can one find $F$ with $F'=g$? Prove that $
+\Re(F)$ differs from $u$ by a real constant.]
+\item Deduce from this result, and from Exercise 11, the Poisson integral representation formula from the Cauchy integral formula: If $u$ is harmonic in the unit disc and continuous on its closure, then if $z = re^{i\theta}$ one has $$u(z)=\frac{1}{2\pi}\int_0^{2\pi} P_r(\theta-\varphi)u(\varphi)\d{\varphi}$$ where $P_r(\gamma)$ is the Poisson kernel for the unit disc given by $$P_r(\gamma) = \frac{1-r^2}{1-2r\cos{\gamma}+r^2}.$$
+\end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+Suppose $f$ is an analytic function defined everywhere in $\C$ and such that for each $z_0\in\C$ at least one coefficient in the expansion $$f(z)=\sum_{n=0}^\infty c_n(z-z_0)^n$$ is equal to 0. Prove that $f$ is a polynomial.
+
+[Hint: Use the fact that $c_nn! = f^{(n)}
+(z_0)$ and use a countability argument.]
+\end{exercise}
+
+\begin{exercise}
+Suppose that $f$ is holomorphic in an open set containing the closed unit disc,
+except for a pole at $z_0$ on the unit circle. Show that if $$\sum_{n=0}^\infty a_nz^n$$ denotes the power series expansion of $f$ in the open unit disc, then $$\lim_{n\to\infty} \frac{a_n}{a_{n+1}} = z_0.$$
+\end{exercise}
+
+\begin{exercise}
+Suppose $f$ is a non-vanishing continuous function on $\overline{\D}$ that is holomorphic in
+$\D$. Prove that if $\abs{f(z)}=1$ whenever $\abs{z} = 1$, then $f$ is constant.
+
+[Hint: Extend $f$ to all of $\C$ by $f(z)=1/\overline{f(1/\overline{z})}$ whenever $\abs{z} > 1$, and argue as in
+the Schwarz reflection principle.]
+\end{exercise}
+
+% start of section 7: problems
+
+\begin{exercise}
+Here are some examples of analytic functions on the unit disc that cannot be extended analytically past the unit circle. The following definition is needed. Let $f$ be a function defined in the unit disc $\D$, with boundary circle $\C$. A point $w$ on $\C$ is said to be regular for $f$ if there is an open neighborhood $U$ of $w$ and an analytic function $g$ on $U$, so that $f = g$ on $\D\cap U$. A function $f$ defined on $\D$ cannot be continued analytically past the unit circle if no point of $\C$ is regular for $f$.
+\begin{enumerate}[label=(\alph*)]
+\item Let $$f(z)=\sum_{n=0}^\infty z^{2^n} \quad \text{for }\abs{z}<1.$$
+Notice that the radius of convergence of the above series is 1. Show that $f$ cannot be continued analytically past the unit disc. [Hint: Suppose
+$\theta = 2\pi p/2^k$, where $p$ and $k$ are positive integers. Let $z = re^{i\theta}$; then
+$\abs{f(re^{i\theta}}\to\infty$ as $r\to1$.]
+\item * Fix $0<\alpha<\infty$. Show that the analytic function $f$ defined by $$f(z)=\sum_{n=0}^\infty 2^{-n\alpha}z^{2^n}\quad \text{for } \abs{z}<1$$ extends continuously to the unit circle, but cannot be analytically continued past the unit circle. [Hint: There is a nowhere differentiable function lurking in the background. See Chapter 4 in Book I.]
+\end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+* Let $$F(z)=\sum_{n=1}^\infty d(n)z^n \quad\text{for }\abs{z}<1$$ where $d(n)$ denotes the number of divisors of $n$. Observe that the radius of convergence of this series is 1. Verify the identity $$\sum_{n=1}^\infty d(n)z^n = \sum_{n=1}^\infty \frac{z^n}{1-z^n}.$$ 
+
+Using this identity, show that if $z = r$ with $0 <r< 1$, then $$\abs{F(r)}\geq c\frac{1}{1-r}\log{(1/(1-r))}$$ as $r\to1$. Similarly, if $\theta = 2\pi p/q$ where $p$ and $q$ are positive integers and $z = re^{i\theta}$, then $$\abs{F(re^{i\theta})}\geq c_{p/q} \frac{1}{1-r}\log(1/(1-r))$$ as $r\to1$. Conclude that $F$ cannot be continued analytically past the unit disc.
+\end{exercise}
+
+\begin{exercise}
+Morera's theorem states that if $f$ is continuous in $\C$, and $\int_T f(z)\d{z}=0$ for all triangles $T$, then $f$ is holomorphic in $\C$. Naturally, we may ask if the conclusion still holds if we replace triangles by other sets.
+\begin{enumerate}[label=(\alph*)]
+\item Suppose that $f$ is continuous on $\C$, and \begin{equation}\tag{16}\int_C f(z)\d{z}=0\end{equation} for every circle $\C$. Prove that $f$ is holomorphic.
+\item More generally, let $\Gamma$ be any toy contour, and $\FF$ the collection of all translates and dilates of $\Gamma$. Show that if $f$ is continuous on $\C$, and $$\int_\gamma f(z)\d{z}=0\quad\text{for all }\gamma\in\FF$$ then $f$ is holomorphic. In particular, Morera's theorem holds under the weaker assumption that $\int_Tf(z)\d{z}=0$ for all equilateral triangles.
+\end{enumerate}
+[Hint: As a first step, assume that $f$ is twice real differentiable, and write $f(z)=f(z_0)+a(z-z_0)+b\overline{(z-z_0)}+O(\abs{z - z_0}^2)$ for $z$ near $z_0$. Integrating this expansion over small circles around $z_0$ yields $\dd{f}/\dd{\overline{z}}=b=0$ at $z_0$. Alternatively, suppose only that $f$ is differentiable and apply Green's theorem to conclude that the real and imaginary parts of $f$ satisfy the Cauchy-Riemann equations.
+
+In general, let $\varphi(w) = \varphi(x, y)$ (when $w = x + iy$) denote a smooth function with
+$0 \leq \varphi(w) \leq 1$, and $\int_{\R^2}\varphi(w)\d{V(w)}=1$, where $\d{V(w)} = \d{x}\d{y}$, and $\int$ denotes the usual integral of a function of two variables in $\R^2$. For each $\epsilon>0$, let $\varphi_\epsilon(z)=\epsilon^{-2}\varphi(\epsilon^{-1}z)$, as well as $$f_\epsilon(z)=\int_{\R^2} f(z-w)\varphi_\epsilon(w)\d{V(w)},$$ where the integral denotes the usual integral of functions of two variables, with $\d{V(w)}$ the area element of $\R^2$. Then $f_\epsilon$ is smooth, satisfies condition (16), and
+$f_\epsilon\to f$ uniformly on any compact subset of $\C$.]
+\end{exercise}
+
+\begin{exercise}
+Prove the converse to Runge's theorem: if $K$ is a compact set whose complement if not connected, then there exists a function $f$ holomorphic in a neighborhood of $K$ which cannot be approximated uniformly by polynomial on $K$.
+
+[Hint: Pick a point $z_0$ in a bounded component of $K^c$, and let $f(z)=1/(z-z_0)$. If $f$ can be approximated uniformly by polynomials on $K$, show that there exists a polynomial $p$ such that $\abs{(z-z_0)p(z) - 1} < 1$. Use the maximum modulus principle (Chapter 3) to show that this inequality continues to hold for all $z$ in the component of $K^c$ that contains $z_0$.]
+\end{exercise}
+
+\begin{exercise}
+* There exists an entire function F with the following "universal" property: given any entire function $h$, there is an increasing sequence $\{N_k\}_{k=1}^\infty$ of positive integers, so that $$\lim_{n\to\infty} F(z+N_k)=h(z)$$ uniformly on every compact subset of $\C$.
+\begin{enumerate}[label=(\alph*)]
+\item Let $p_1,p_2,\cdots$ denote an enumeration of the collection of polynomials whose coefficients have rational real and imaginary parts. Show that it suffices to find an entire function $F$ and an increasing sequence $\{M_n\}$ of positive integers, such that \begin{equation}\tag{17}\abs{F(z)-p_n(z-M_n)}<\frac{1}{n}\quad\text{whenever }z\in D_n,\end{equation} where $D_n$ denotes the disc centered at $M_n$ and of radius $n$. [Hint: Given $h$ entire, there exists a sequence $\{n_k\}$ such that $\lim_{k\to\infty}p_{n_k}(z)=h(z)$ uniformly on every compact subset of $\C$.]
+\item Construct $F$ satisfying (17) as an infinite series $$F(z)\sum_{n=1}^\infty u_n(z)$$ where $u_n(z) = p_n(z - M_n)e^{-c_n(z-M_n)^2}$, and the quantities $c_n > 0$ and $M_n > 0$ are chosen appropriately with $c_n\to0$ and $M_n\to\infty$. [Hint: The function $e^{-z^2}$ vanishes rapidly as $\abs{z}\to\infty$ in the sectors $\{\abs{\arg{z}}< \pi/4 - \delta\}$ and $\{\abs{\pi-\arg{z}}<\pi/4-\delta\}$.]
+\end{enumerate}
+In the same spirit, there exists an alternate "universal" entire function $G$ with the following property: given any entire function $h$, there is an increasing sequence $\{N_k\}_{k=1}^\infty$ of positive integers, so that $$\lim_{k\to\infty}D^{N_k}G(z)=h(z)$$ uniformly on every compact subset of $\C$. Here $D^jG$ denotes the $j^{\text{th}}$ (complex) derivative of $G$.
+\end{exercise}
